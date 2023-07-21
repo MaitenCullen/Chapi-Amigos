@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+@include mat.strong-focus-indicators();
+
+$my-primary: mat.define-palette(mat.$purple-palette, 200, 100, 500);
+$my-accent: mat.define-palette(mat.$purple-palette, 500, A200, A100, A400);
+$my-complementary: mat.define-palette(mat.$blue-palette, 100,500, 800);
+$my-warn: mat.define-palette(mat.$teal-palette, 100, 400, 900);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   complementary:$my-complementary,
+   warn: $my-warn
+ )
+));
+
+@include mat.all-component-themes($my-theme);
+@include mat.strong-focus-indicators-theme($my-theme);
