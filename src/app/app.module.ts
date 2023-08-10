@@ -7,19 +7,21 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { MaterialModule } from './material.module';
 import { FormularioComponent } from './form/formulario/formulario.component';
+import { ScreensComponent } from './screens/screens.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FormularioComponent
+    FormularioComponent,
+    ScreensComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    HeaderComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
